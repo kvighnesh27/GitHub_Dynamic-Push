@@ -1,0 +1,201 @@
+/* style.css */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #34495e;
+    --accent-color: #3498db;
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+.resume-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 3rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-top: 5px solid var(--primary-color);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Styling for text-based JS links (like the email) */
+.text-link {
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+/* Styling for the new Social Buttons */
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.8rem;
+}
+
+.social-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.skill-category h4 {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.3rem;
+}
+
+.skill-category p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.project-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3rem;
+}
+
+.project-header h4, .edu-header h4 {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.project-item, .experience-item, .education-item {
+    margin-bottom: 1.2rem;
+}
+
+.project-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+ul li {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+}
+
+/* Print Button Styling */
+.print-btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.print-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: var(--white);
+        padding: 0;
+    }
+    
+    .resume-container {
+        box-shadow: none;
+        border-top: none;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    /* Hide all buttons when printing */
+    .print-btn, .social-buttons {
+        display: none;
+    }
+}
