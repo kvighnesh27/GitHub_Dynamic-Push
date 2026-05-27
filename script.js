@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     window.location.href = targetUrl;
                 } else {
                     // For external links like GitHub/LinkedIn buttons, open in a new tab
-                    window.open(targetUrl, '_blank');
+                    window.open(targetUrl, 'https://github.com/kvighnesh27');
                 }
             }
         });
